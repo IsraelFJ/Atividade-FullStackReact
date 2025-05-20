@@ -45,7 +45,7 @@ function FormularioCadastro() {
     return (
         <div className="container">
             <img src={logo} alt="Logo da empresa" />
-            <h2>Cadastro de usuários</h2>
+            <h2>Cadastro de Jogadores</h2>
             <form onSubmit={(e) => {e.preventDefault(); cadastrarUsuario()}}>
                 <input 
                     type="text"
@@ -95,14 +95,33 @@ function FormularioCadastro() {
                     onChange={(e) => setNumeroDaCamisa(e.target.value)}
                     required
                 />
-                <input
-                type="text"
-                id="sexo"
-                placeholder="Sexo"
-                value={sexo}
-                onChange={(e) => setSexo(e.target.value)}
-                required
-                />
+            <div className="sexo-container">
+                    <label>Sexo</label>
+                    <label>
+                        <input
+                            type="radio"
+                            id="masculino"
+                            name="sexo"
+                            value="MASCULINO"
+                            checked={sexo === "MASCULINO"}
+                            onChange={(e) => setSexo(e.target.value)}
+                            required
+                        />
+                        Masculino
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            id="feminino"
+                            name="sexo"
+                            value="FEMININO"
+                            checked={sexo === "FEMININO"}
+                            onChange={(e) => setSexo(e.target.value)}
+                            required
+                        />
+                        Feminino
+                    </label>
+                </div>
                 
                 <button type="submit">Cadastrar</button>
             </form>
