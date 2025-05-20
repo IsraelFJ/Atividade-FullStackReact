@@ -70,3 +70,25 @@ button:hover {
 .link-usuarios:hover {
     text-decoration: none;
 }
+
+.sexo-container {
+    margin-top: 15px;
+    display: flex; /* Flexbox para alinhar os elementos horizontalmente */
+    gap: 20px; /* Espaçamento entre os radio buttons */
+  }
+  
+  .sexo-container label {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center; /* Alinha o texto e o botão no centro */
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px; /* Espaço entre o botão de radio e o texto */
+  }
+
+  .container img {
+    width: 300px; /* Ajuste o valor conforme o tamanho desejado */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Espaço abaixo da logo */
+  }
